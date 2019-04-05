@@ -9,6 +9,7 @@ import { MoedaService, ConversorService } from './services';
     ConversorComponent],
   imports: [
     CommonModule,
+    
   ],
   exports: [                                              // se usar rotas tem que ter o exports
     ConversorComponent
