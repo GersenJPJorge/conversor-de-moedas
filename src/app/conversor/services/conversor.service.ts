@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-
-import { Conversao,	ConversaoResponse } from '../models';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
+import { Conversao,	ConversaoResponse } from '../models';
 
 @Injectable()
 export class ConversorService {
@@ -26,11 +25,12 @@ export class ConversorService {
     // quando se usa a crase o javascript/typscript vai fazer uma interpretação do texto que tiver contido
     // aceita valores dinamicos e para que o valor dinamico seja interpretado precisa do ${ (cifrão seguido da chave) 
   	return this.http
-    .get(this.BASE_URL + params) // o get retorna um observable
-    // do angular 6 em diante não precisa mais de map e catch
-//      .map(response => response.json() as ConversaoResponse)
-//      .catch(error => Observable.throw(error));
-}
+          .get(this.BASE_URL + params); 
+          // o get retorna um observable
+          // do angular 6 em diante não precisa mais de map e catch
+          //      .map(response => response.json() as ConversaoResponse)
+          //      .catch(error => Observable.throw(error));
+      }
 
   /**
    * Retorna a cotação para dado uma response.
@@ -60,7 +60,6 @@ export class ConversorService {
   	if (conversaoResponse === undefined) {
   		return '0';
   	}
-
   	return (1 / conversaoResponse.rates[conversao.moedaPara])
     .toFixed(4);   // limitar o numero de casas decimais em 4
   }
