@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ConversorComponent } from './components';
+import { MoedaService } from './services';
 0
 @NgModule({
   declarations: [
@@ -12,5 +13,8 @@ import { ConversorComponent } from './components';
   exports: [                                              // se usar rotas tem que ter o exports
     ConversorComponent
   ],
+  providers: [
+    MoedaService,
+  ]
 })
 export class ConversorModule { }
