@@ -1,26 +1,21 @@
-import { Directive, HostListener /*, 
-	ElementRef */
-} from '@angular/core';
-/*
-import { 
-  NG_VALUE_ACCESSOR, 
-  ControlValueAccessor 
-} from '@angular/forms';*/
+import { Directive, HostListener, ElementRef } from '@angular/core';
+
+import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 
 @Directive({
-  selector: '[numero]'/*
+  selector: '[numero]',
   providers: [{
     provide: NG_VALUE_ACCESSOR, 
     useExisting: NumeroDirective, 
     multi: true 
-  }]*/
+  }]
 })
-export class NumeroDirective /*implements ControlValueAccessor*/ {
+export class NumeroDirective implements ControlValueAccessor {
 
- /* onTouched: any;
-  onChange: any;
-*/
-  constructor(/*private el: ElementRef*/) {}
+ onTouched: any;
+ onChange: any;
+
+  constructor(private el: ElementRef) {}
 
   /**
    * Implementa evento de keyup para o elemento da diretiva.
@@ -47,7 +42,7 @@ export class NumeroDirective /*implements ControlValueAccessor*/ {
     }
 
     $event.target.value = valor;   // pega o valor e joga em event
-    // this.onChange(valor);
+      this.onChange(valor);
   }
 
   /**
@@ -57,7 +52,7 @@ export class NumeroDirective /*implements ControlValueAccessor*/ {
    * @param any fn
    */
 
-   /*
+   
   registerOnChange(fn: any): void {
     this.onChange = fn;
   }
@@ -69,8 +64,8 @@ export class NumeroDirective /*implements ControlValueAccessor*/ {
    * @param any fn
    */
 
-   /*
-  registerOnTouched(fn: any): void {
+   
+  registerOnTouched(fn: any): void {   // è mais para mobile
     this.onTouched = fn;
   }
 
@@ -80,9 +75,8 @@ export class NumeroDirective /*implements ControlValueAccessor*/ {
    * @param any value
    */
 
-   /*
+   
   writeValue(value: any): void {
   	this.el.nativeElement.value = value;
   }
-*/
 }
