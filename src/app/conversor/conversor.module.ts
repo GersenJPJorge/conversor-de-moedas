@@ -1,10 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { ConversorComponent } from './components';
+0
 @NgModule({
-  declarations: [],
+  declarations: [
+    ConversorComponent],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+  ],
+  exports: [                                              // se usar rotas tem que ter o exports
+    ConversorComponent
+  ],
 })
 export class ConversorModule { }
