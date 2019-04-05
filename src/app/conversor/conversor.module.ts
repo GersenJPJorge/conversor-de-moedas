@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { ConversorComponent } from './components';
 import { MoedaService, ConversorService } from './services';
 import { HttpClientModule } from '@angular/common/http';
+import { NumeroDirective } from './directives';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   declarations: [
   	ConversorComponent,
+  	NumeroDirective,
   ],
   exports: [                                              // se usar rotas tem que ter o exports
   	ConversorComponent,
