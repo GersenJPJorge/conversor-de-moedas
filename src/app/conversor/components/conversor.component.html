@@ -17,8 +17,12 @@
 			placeholder="0" 
 			[(ngModel)]="conversao.valor"
 			numero 
+<<<<<<< HEAD
 			required>
 			<!-- valor: {{ conversao.valor }} 	-->
+=======
+			required> valor: {{ conversao.valor }}
+>>>>>>> 2832259d5173eb5ce5ef7c79a4b0a2bd7f71203f
 		<select 
 			name="moedaDe"
 			class="form-control"
@@ -53,6 +57,7 @@
 			data-target="#modalCotacao"
 			(click)="converter()"
 			[disabled]="!conversaoForm.form.valid">
+<<<<<<< HEAD
 			<!--{{ conversaoResponse | json }} -->
 	  </form>
 	 </div>
@@ -62,4 +67,9 @@
 		[conversao]="conversao"
 		(onConfirm)="init()">
 	 </modal-cotacao>
+=======
+			{{ conversaoResponse | json }}
+	  </form>
+	 </div>
+>>>>>>> 2832259d5173eb5ce5ef7c79a4b0a2bd7f71203f
 </div>

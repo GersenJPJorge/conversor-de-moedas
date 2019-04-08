@@ -6,8 +6,13 @@ import { Conversao,	ConversaoResponse } from '../models';
 @Injectable()
 export class ConversorService {
 
+<<<<<<< HEAD
   private readonly BASE_URL = "http://data.fixer.io/api/latest?access_key=eba7130a5b2d720ce43eb5fcddd47cc3";
 // private readonly BASE_URL = "http://data.fixer.io/api/latest";
+=======
+//  private readonly BASE_URL = "http://data.fixer.io/api/latest?access_key=eba7130a5b2d720ce43eb5fcddd47cc3";
+private readonly BASE_URL = "http://data.fixer.io/api/latest";
+>>>>>>> 2832259d5173eb5ce5ef7c79a4b0a2bd7f71203f
 
   constructor(private http: HttpClient) {}
 
