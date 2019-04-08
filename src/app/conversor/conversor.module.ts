@@ -7,6 +7,7 @@ import { MoedaService, ConversorService } from './services';
 import { HttpClientModule } from '@angular/common/http';
 import { NumeroDirective } from './directives';
 import { ModalCotacaoComponent } from './utils';
+import { DataBrPipe } from './pipes';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import { ModalCotacaoComponent } from './utils';
   	ConversorComponent,
   	NumeroDirective,
   	ModalCotacaoComponent,
+  	DataBrPipe,
   ],
   exports: [                                              // se usar rotas tem que ter o exports
   	ConversorComponent,

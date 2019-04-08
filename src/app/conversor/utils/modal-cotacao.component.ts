@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 import { 
 	Component, Input, Output, EventEmitter, OnInit
 } from '@angular/core';
 
 import { ConversaoResponse, Conversao } from '../models/';
 import { ConversorService } from '../services';
-=======
-import { Component, OnInit } from '@angular/core';
->>>>>>> 2832259d5173eb5ce5ef7c79a4b0a2bd7f71203f
 
 @Component({
   selector: 'modal-cotacao',
@@ -16,7 +12,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalCotacaoComponent implements OnInit {
 
-<<<<<<< HEAD
 	@Input() id: string;
 	@Input() conversaoResponse: ConversaoResponse;
 	@Input() conversao: Conversao = new Conversao();
@@ -55,11 +50,4 @@ export class ModalCotacaoComponent implements OnInit {
 		return this.conversorService.dataCotacao(
 	  		this.conversaoResponse);
 	}
-=======
-  constructor() { }
-
-  ngOnInit() {
-  }
-
->>>>>>> 2832259d5173eb5ce5ef7c79a4b0a2bd7f71203f
 }
