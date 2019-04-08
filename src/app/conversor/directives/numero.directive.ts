@@ -74,7 +74,6 @@ export class NumeroDirective implements ControlValueAccessor {
    * 
    * @param any value
    */
-
    
   writeValue(value: any): void {
   	this.el.nativeElement.value = value;
