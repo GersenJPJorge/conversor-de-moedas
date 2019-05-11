@@ -27,6 +27,6 @@ import { DataBrPipe } from './pipes';
   providers: [
   	MoedaService,
     ConversorService,
-  ]
+  ],
 })
 export class ConversorModule { }
